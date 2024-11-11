@@ -3,13 +3,15 @@ using System.Data;
 using System.Windows.Forms;
 using Capa_Controlador_Lotes;
 using System.IO;
+using Capa_Controlador_Seguridad;
 namespace Capa_Vista_Lotes
+    //Comentario Examen Final Anika Escoto 0901-21-8122
 {
     public partial class Frm_Lotes : Form
     {
         private Control_Lotes controlLotes;
         private ToolTip toolTip;
-
+        logica logicaSeg = new logica();
         public Frm_Lotes()
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace Capa_Vista_Lotes
             toolTip.SetToolTip(btn_Reporte, "Genera un reporte de los lotes");
             toolTip.SetToolTip(btn_Ayuda, "Abre la ayuda para la gestión de lotes");
         }
+
+        string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
 
         // Método para cargar los combos de producto y proceso
         private void CargarCombos()
@@ -114,6 +118,8 @@ namespace Capa_Vista_Lotes
                 MessageBox.Show("Lote agregado correctamente.");
                 btn_Nuevo_Click(sender, e);
                 CargarLotes();
+                logicaSeg.funinsertarabitacora(idUsuario, "agrego lotes en", "tbl_lotes_encabezado", "1000");
+                logicaSeg.funinsertarabitacora(idUsuario, "agrego lotes en", "tbl_lotes_detalles", "1000");
             }
             catch (Exception ex)
             {
@@ -139,6 +145,8 @@ namespace Capa_Vista_Lotes
                     MessageBox.Show("Lote actualizado correctamente.");
                     btn_Nuevo_Click(sender, e);
                     CargarLotes();
+                    logicaSeg.funinsertarabitacora(idUsuario, "editó lotes en", "tbl_lotes_encabezado", "1000");
+                    logicaSeg.funinsertarabitacora(idUsuario, "editó lotes en", "tbl_lotes_detalles", "1000");
                 }
                 catch (Exception ex)
                 {
@@ -160,6 +168,8 @@ namespace Capa_Vista_Lotes
                     MessageBox.Show("Lote desactivado correctamente.");
                     btn_Nuevo_Click(sender, e); // Limpia el formulario y genera un nuevo ID
                     CargarLotes(); // Recarga los datos en el DataGridView para mostrar el cambio
+                    logicaSeg.funinsertarabitacora(idUsuario, "eliminó lotes en", "tbl_lotes_encabezado", "1000");
+                    logicaSeg.funinsertarabitacora(idUsuario, "eliminó lotes en", "tbl_lotes_detalles", "1000");
                 }
                 catch (Exception ex)
                 {

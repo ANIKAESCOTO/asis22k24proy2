@@ -17,6 +17,7 @@ using Capa_Vista_Lotes;
 using Capa_Vista_Mantenimiento;
 using Capa_Vista_Maquinaria;
 using System.Drawing.Imaging;
+using Capa_Controlador_Seguridad;
 
 namespace Capa_Vista_Produccion
 {
@@ -28,6 +29,7 @@ namespace Capa_Vista_Produccion
         private bool arrastrando = false;
         private Point posicionInicialCursor;
         private Point posicionInicialFormulario;
+        
 
         // Variables para almacenar la referencia a los formularios de cierre y pólizas
         private Frm_Cierre cierreForm;

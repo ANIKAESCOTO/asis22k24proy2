@@ -5,7 +5,9 @@ using Capa_Control_Mantenimiento;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using System.IO;
+using Capa_Controlador_Seguridad;
 
+//Comentario Examen Final Anika Escoto 0901-21-8122
 namespace Capa_Vista_Mantenimiento
 {
     public partial class Frm_Mantenimiento_Produccion : Form
@@ -13,6 +15,7 @@ namespace Capa_Vista_Mantenimiento
         private Control_Mantenimiento control;
         private int idMaquinaSeleccionada; // Variable para almacenar temporalmente el ID de la máquina
         private ToolTip toolTip;
+        logica logicaSeg = new logica();
 
         public Frm_Mantenimiento_Produccion()
         {
@@ -39,7 +42,7 @@ namespace Capa_Vista_Mantenimiento
             // Cargar el último ID al TextBox
             ObtenerUltimoIdMaquinaria();
         }
-
+        string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
         private void CargarComboNombreMaquina()
         {
             cbo_nombre_maquina.Items.Clear();
@@ -99,6 +102,7 @@ namespace Capa_Vista_Mantenimiento
                     MessageBox.Show("Mantenimiento agregado correctamente.");
                     CargarDatos();
                     ObtenerUltimoIdMaquinaria();
+                    logicaSeg.funinsertarabitacora(idUsuario, "agrego mantenimiento en", "tbl_mantenimientos", "5001");
                 }
             }
             catch (Exception ex)
@@ -131,6 +135,7 @@ namespace Capa_Vista_Mantenimiento
 
                     MessageBox.Show("Mantenimiento actualizado correctamente.");
                     CargarDatos();
+                    logicaSeg.funinsertarabitacora(idUsuario, "editó mantenimiento en", "tbl_mantenimientos", "5001");
                 }
                 else
                 {
@@ -157,6 +162,7 @@ namespace Capa_Vista_Mantenimiento
                         MessageBox.Show("Mantenimiento desactivado correctamente.");
                         CargarDatos();
                     }
+                    logicaSeg.funinsertarabitacora(idUsuario, "eliminó mantenimiento en", "tbl_mantenimientos", "5001");
                 }
                 else
                 {

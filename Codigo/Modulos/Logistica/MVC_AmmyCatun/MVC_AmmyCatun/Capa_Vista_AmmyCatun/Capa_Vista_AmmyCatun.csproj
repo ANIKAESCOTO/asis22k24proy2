@@ -35,16 +35,10 @@
     <Reference Include="Capa_Controlador_AmmyCatun">
       <HintPath>..\Capa_Controlador_AmmyCatun\bin\Debug\Capa_Controlador_AmmyCatun.dll</HintPath>
     </Reference>
-    <Reference Include="Capa_Controlador_Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Componentes\Navegador\Capa_Vista_Navegador\bin\Debug\Capa_Controlador_Navegador.dll</HintPath>
-    </Reference>
     <Reference Include="Capa_Controlador_Reporteria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="Capa_Controlador_Seguridad, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Capa_Vista_Consulta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="Capa_Vista_Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Capa_Vista_Navegador.dll</HintPath>
+    <Reference Include="Capa_Vista_Navegador">
+      <HintPath>..\..\..\..\..\Componentes\Navegador\Capa_Vista_Navegador\bin\Debug\Capa_Vista_Navegador.dll</HintPath>
     </Reference>
     <Reference Include="Capa_Vista_Reporteria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -52,7 +46,7 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Interfac_V3">
-      <HintPath>..\..\..\Menus\ModernGUI_V3\bin\Debug\Interfac_V3.exe</HintPath>
+      <HintPath>..\..\..\..\Menus\ModernGUI_V3\bin\Debug\Interfac_V3.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

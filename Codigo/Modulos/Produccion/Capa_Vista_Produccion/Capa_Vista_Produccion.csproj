@@ -34,6 +34,10 @@
     <Reference Include="Capa_Controlador_Produccion">
       <HintPath>..\Capa_Controlador_Produccion\bin\Debug\Capa_Controlador_Produccion.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Controlador_Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\Seguridad\Capa_Controlador_Seguridad\bin\Debug\Capa_Controlador_Seguridad.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_Cierre_Produccion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Cierre_Produccion\Capa_Vista_Cierre_Produccion\bin\Debug\Capa_Vista_Cierre_Produccion.dll</HintPath>

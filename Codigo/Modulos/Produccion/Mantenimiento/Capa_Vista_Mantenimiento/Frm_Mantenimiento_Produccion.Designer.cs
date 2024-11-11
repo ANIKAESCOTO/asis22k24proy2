@@ -309,7 +309,7 @@
             this.Btn_Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Actualizar.FlatAppearance.BorderSize = 0;
             this.Btn_Actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(357, 21);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(361, 21);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(63, 55);
             this.Btn_Actualizar.TabIndex = 39;
